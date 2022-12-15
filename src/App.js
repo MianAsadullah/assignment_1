@@ -4,7 +4,11 @@ import { options } from "./data"
 import { checkValidations } from "./utils"
 
 function App() {
-  const [formData, setFormData] = useState({ name: "", sectors: [] })
+  const [formData, setFormData] = useState({
+    name: "",
+    sectors: [],
+    agreeToTerms: false
+  })
   const [formError, setFormError] = useState({})
 
   return (
