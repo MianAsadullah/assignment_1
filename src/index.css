@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 
-.mt-100 {
+/* .mt-100 {
   margin-top: 100px
-}
+} */
 
 body {
   background: #00B4DB;
@@ -13,4 +13,8 @@ body {
   background: linear-gradient(to right, #0083B0, #00B4DB);
   color: #514B64;
   min-height: 100vh
+}
+svg{
+  display: inline;
+  vertical-align:text-bottom;
 }

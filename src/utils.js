@@ -5,6 +5,7 @@ export const checkValidations = (
   formError
 ) => {
   let submit = true
+  console.log("formData", formData)
   if (formData.name === "") {
     setFormError({ ...formError, name: true })
     submit = false
