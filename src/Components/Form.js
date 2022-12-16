@@ -12,26 +12,21 @@ function SectorForm() {
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
+  const [formError, setFormError] = useState({})
   const [formData, setFormData] = useState({
     name: "",
     sectors: [],
     agreeToTerms: false
   })
-  const [formError, setFormError] = useState({})
   useEffect(() => {
     if (Object.values(item).length > 0) {
       setFormData({ ...item })
     }
   }, [item])
 
-  let newArr = [...records]
-
   const handleFormSubmit = e => {
     e.preventDefault()
-    console.log(" [...records]", newArr)
-
-    // console.log("recordsCopy", arrCopy)
-    console.log("records", records)
+    let newArr = [...records]
     if (
       checkValidations(formData, setFormError, setFormData, formError) === true
     ) {
@@ -50,7 +45,7 @@ function SectorForm() {
     <section className="h-screen">
       <div className="container px-6  py-12 h-full">
         <div className="flex justify-center items-center flex-wrap bg-white  h-full g-6 text-gray-800">
-          <div className="xl:w-6/12 md:w-6/12 md:none">
+          <div className="xl:w-6/12 md:w-6/12  hidden  lg:block">
             <img class="w-full" src={LeftImage} alt="loading..." />
           </div>
           <div className="lg:w-6/12  flex items-center lg:rounded-r-lg px-6 rounded-b-lg lg:rounded-bl-none">
